@@ -104,6 +104,40 @@ export const dummyShowsData = [
         "runtime": 103,
     },
     {
+    _id: "1234821",
+    id: 1234821,
+    title: "Jurassic World: Rebirth",
+    overview:
+    "Five years after the events of Dominion, a covert team races to secure dinosaur DNA that could change the future of humanity.",
+    poster_path: "/jurassic-world.jpg",
+    backdrop_path: null,
+    genres: [
+    { id: 28, name: "Action" },
+    { id: 12, name: "Adventure" },
+    { id: 878, name: "Science Fiction" }
+    ],
+    casts: [
+    {
+    id: 1245,
+    name: "Scarlett Johansson",
+    character: "Zora Bennett",
+    profile_path: null
+    },
+    {
+    id: 2830,
+    name: "Mahershala Ali",
+    character: "Duncan Kincaid",
+    profile_path: null
+    }
+    ],
+    release_date: "2025-07-02",
+    original_language: "en",
+    tagline: "Life always finds a way… again.",
+    vote_average: 6.5,
+    vote_count: 19000,
+    runtime: 133
+    },
+    {
         "_id": "552524",
         "id": 552524,
         "title": "Lilo & Stitch",
@@ -183,6 +217,69 @@ export const dummyShowsData = [
         "vote_average": 7.042,
         "vote_count": 19885,
         "runtime": 170,
+    },
+    {
+    _id: "83533",
+    id: 83533,
+    title: "Avatar: Fire and Ash",
+    overview:
+    "Jake Sully and Neytiri face a new threat as the Na’vi encounter a dangerous fire-based clan, challenging the balance of Pandora.",
+    poster_path: "/avatar-fire-and-ash.jpg",
+    backdrop_path: null,
+    genres: [
+    { id: 878, name: "Science Fiction" },
+    { id: 12, name: "Adventure" },
+    { id: 28, name: "Action" }
+    ],
+    casts: [],
+    release_date: "2025-12-19",
+    original_language: "en",
+    tagline: "Pandora will burn.",
+    vote_average: 8.4,
+    vote_count: 125000,
+    runtime: 190
+    },
+    {
+    _id: "1038392",
+    id: 1038392,
+    title: "The Conjuring: Last Rites",
+    overview:
+    "Ed and Lorraine Warren confront their most terrifying and final case, where faith alone may not be enough to stop the evil.",
+    poster_path: "/conjuring-last-rites.jpg",
+    backdrop_path: null,
+    genres: [
+    { id: 27, name: "Horror" },
+    { id: 9648, name: "Mystery" },
+    { id: 53, name: "Thriller" }
+    ],
+    casts: [],
+    release_date: "2025-09-05",
+    original_language: "en",
+    tagline: "The final chapter of evil.",
+    vote_average: 7.6,
+    vote_count: 68000,
+    runtime: 115
+},
+{
+    _id: "911430",
+    id: 911430,
+    title: "F1: The Movie",
+    overview:
+    "A veteran Formula 1 driver returns to the grid to mentor a young prodigy, risking everything for one final shot at glory.",
+    poster_path: "/f1-movie.jpg",
+    backdrop_path: null,
+    genres: [
+    { id: 28, name: "Action" },
+    { id: 18, name: "Drama" },
+    { id: 10770, name: "Sport" }
+    ],
+    casts: [],
+    release_date: "2025-06-27",
+    original_language: "en",
+    tagline: "Feel the speed.",
+    vote_average: 8.1,
+    vote_count: 54000,
+    runtime: 140
     },
     {
         "_id": "986056",

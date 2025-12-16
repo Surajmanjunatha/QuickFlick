@@ -21,7 +21,7 @@ const HeroSection = () => {
                <ClockIcon  className='w-4.5 h-4.5'/> 2h 29m
           </div>
      </div>
-     <p className='max-w-md text-white-300'>The fate of the universe hangs in the balance as the Avengers and Guardians of the Galaxy unite to stop Thanos from collecting all six Infinity Stones and enacting his twisted plan to wipe out half of all life.</p>
+     <p className='max-w-md text-gray-300'>The fate of the universe hangs in the balance as the Avengers and Guardians of the Galaxy unite to stop Thanos from collecting all six Infinity Stones and enacting his twisted plan to wipe out half of all life.</p>
 
      <button onClick={()=>navigate('/movies')} className='flex items-center gap-1 px-6 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-full font medium cursor-pointer'>
           Explore Movies
