@@ -61,6 +61,10 @@ const releaseSeatsAndDeleteBooking = inngest.createFunction(
                const bookingId = event.data.bookingId;
                const booking = await Booking.findById(bookingId)
 
+               if (!booking) {
+               console.log("Booking already deleted or not found:", bookingId);
+               return;
+               }
 
                // if payment is not made , release seats and delete booking
                if(!booking.isPaid){
