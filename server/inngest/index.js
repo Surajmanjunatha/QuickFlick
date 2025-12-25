@@ -2,6 +2,7 @@ import { Inngest } from "inngest";
 import User from "../models/User.js";
 import Booking from "../models/Booking.js";
 import Show from "../models/Show.js";
+import sendEmail from "../configs/nodeMailer.js";
 
 // create a client to send and receive events
 export const inngest = new Inngest({ id: "movie-ticket-booking" });
@@ -75,13 +76,56 @@ const releaseSeatsAndDeleteBooking = inngest.createFunction(
      }
 )
 
+// Inngest function to send email when user book a show
+const sendBookingConfirmationEmail = inngest.createFunction(
+     {id: "send-booking-confirmation-email"},
+     {event: "app/show.booked" },
+     async ({ event, step })=>{
+          const { bookingId } = event.data;
+
+          const booking = await Booking.findById(bookingId).populate({
+               path: 'show',
+               populate: {path : "movie", model : "Movie"}
+          }).populate('user');
+
+          await sendEmail({
+          to: booking.user.email,
+          subject: `Payment Confirmation: "${booking.show.movie.title}" booked!`,
+          body: `
+               <p style="color:#cbd5f5;">
+               Hi <strong>${booking.user.name}</strong>,
+               </p>
+
+               <p style="color:#cbd5f5;">
+               Your movie ticket has been successfully booked 🎉  
+               Get ready for an amazing cinematic experience!
+               </p>
+
+               <p style="color:#cbd5f5;">
+               <strong>${booking.show.movie.title}</strong><br/>
+               ${new Date(booking.show.showDateTime).toDateString()} •
+               ${new Date(booking.show.showDateTime).toLocaleTimeString()}<br/>
+               Seats: ${booking.bookedSeats.join(', ')}<br/>
+               Total: ₹${booking.amount}
+               </p>
+               <p style="color:#94a3b8; font-size:14px;">
+               Please show this email or your ticket at the theatre entrance.
+               </p>
+               <p style="color:#94a3b8; font-size:14px;">Enjoy the show! </p>
+               <p style="color:#94a3b8; font-size:14px;">Thanks for booking with us!<br/> -QuickFlick Team</p>
+               `
+          });
+     }
+)
+
 
 // create a empty array where we'll export future inngest functions
 export const functions = [
      syncUserCreation,
      syncUserDeletion,
      syncUserUpdation,
-     releaseSeatsAndDeleteBooking
+     releaseSeatsAndDeleteBooking,
+     sendBookingConfirmationEmail
 ];
 
 
