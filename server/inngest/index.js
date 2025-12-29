@@ -114,7 +114,6 @@ const sendBookingConfirmationEmail = inngest.createFunction(
      }
 )
 
-
 // create a empty array where we'll export future inngest functions
 export const functions = [
      syncUserCreation,
