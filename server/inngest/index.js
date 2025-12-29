@@ -100,29 +100,16 @@ const sendBookingConfirmationEmail = inngest.createFunction(
           await sendEmail({
           to: booking.user.email,
           subject: `Payment Confirmation: "${booking.show.movie.title}" booked!`,
-          body: `
-               <p style="color:#cbd5f5;">
-               Hi <strong>${booking.user.name}</strong>,
+          body: ` <div style="font-family: Arial, sans-serif; line-height: 1.5;">
+               <h2>Hi ${booking.user.name},</h2>
+               <p>Your booking for <strong style="color: #F84565;">"${booking.show.movie.title}"</strong> is confirmed.</p>
+               <p>
+               <strong>Date:</strong> ${new Date(booking.show.showDateTime).toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' })} <br/>
+               <strong>Date:</strong> ${new Date(booking.show.showDateTime).toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' })}
                </p>
-
-               <p style="color:#cbd5f5;">
-               Your movie ticket has been successfully booked 🎉  
-               Get ready for an amazing cinematic experience!
-               </p>
-
-               <p style="color:#cbd5f5;">
-               <strong>${booking.show.movie.title}</strong><br/>
-               ${new Date(booking.show.showDateTime).toDateString()} •
-               ${new Date(booking.show.showDateTime).toLocaleTimeString()}<br/>
-               Seats: ${booking.bookedSeats.join(', ')}<br/>
-               Total: ₹${booking.amount}
-               </p>
-               <p style="color:#94a3b8; font-size:14px;">
-               Please show this email or your ticket at the theatre entrance.
-               </p>
-               <p style="color:#94a3b8; font-size:14px;">Enjoy the show! </p>
-               <p style="color:#94a3b8; font-size:14px;">Thanks for booking with us!<br/> -QuickFlick Team</p>
-               `
+               <p>Enjoy the show! </p>
+               <p> Thanks for booking with us! <br/>-QuickFlick Team</p>
+               </div>`
           });
      }
 )
