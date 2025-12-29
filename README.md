@@ -1,95 +1,117 @@
-🎬 QuickFlick — Movie Ticket Booking Platform
+# 🎬 QuickFlick — Movie Ticket Booking Platform
 
-QuickFlick is a full-stack movie ticket booking web application built using the MERN stack.
+QuickFlick is a full-stack **movie ticket booking web application** built using the **MERN stack**.  
 It enables users to browse movies, select showtimes, book seats in real time, and complete secure payments, while providing admins with full control over movies, shows, and bookings.
 
-🔗 Live Demo: https://quickflick-sigma.vercel.app
+🔗 **Live Demo:** https://quickflick-sigma.vercel.app
 
-✨ Features
-User
+---
 
-Browse movies and shows powered by TMDB API
+## ✨ Features
 
-Real-time seat selection and booking
+### 👤 User
+- Browse movies and shows powered by **TMDB API**
+- Real-time seat selection and booking
+- Dynamic seat locking during checkout
+- Automatic seat release after **10 minutes** if payment is not completed
+- Secure payments using **Stripe**
+- Booking confirmation emails
+- Automated show reminder emails
+- View booking history
 
-Dynamic seat locking during checkout
+### 🛠 Admin
+- Add and manage movies and shows
+- Configure show timings and pricing
+- View bookings and analytics
+- Prevent double bookings using seat-state management
 
-Automatic seat release after 10 minutes if payment is not completed
+---
 
-Secure payments using Stripe
+## 🔐 Authentication & Payments
+- **Clerk** for authentication and user management
+- **Stripe** for secure payment processing
+- Server-side validation for booking and payment flows
 
-Booking confirmation emails
+---
 
-Automated show reminder emails
+## 📧 Email Notifications
+- Transactional emails via **Brevo SMTP**
+- Booking confirmation emails
+- Automated show reminder emails
 
-View booking history
+---
 
-Admin
+## 🧠 Seat Management
+- Seats are temporarily locked when checkout begins
+- Locks automatically expire after **10 minutes** if payment is incomplete
+- Ensures concurrency safety and prevents race conditions
 
-Add and manage movies and shows
+---
 
-Configure show timings and pricing
+## 🧰 Tech Stack
 
-View bookings and analytics
+### Frontend
+- React
+- Vite
+- Tailwind CSS
 
-Prevent double bookings using seat-state management
+### Backend
+- Node.js
+- Express.js
 
-🔐 Authentication & Payments
+### Database & APIs
+- MongoDB
+- TMDB API
 
-Clerk for authentication and user management
+### Auth, Payments & Deployment
+- Clerk
+- Stripe
+- Vercel
+- Render
 
-Stripe for secure payment processing
+---
 
-Server-side validation for booking and payment flows
+## 📸 Screenshots
 
-📧 Email Notifications
+<p align="center">
+  <img src="screenshots/home.png" width="42%" />
+  <img src="screenshots/movies.png" width="42%" />
+  <br/>
+  <em>Home Page · Movies Listing</em>
+</p>
 
-Transactional emails via Brevo SMTP
+<p align="center">
+  <img src="screenshots/movieDetails.png" width="42%" />
+  <img src="screenshots/trailers.png" width="42%" />
+  <br/>
+  <em>Movie Details · Trailers</em>
+</p>
 
-Booking confirmation emails
+<p align="center">
+  <img src="screenshots/seatLayout.png" width="42%" />
+  <img src="screenshots/paymentpage.png" width="42%" />
+  <br/>
+  <em>Seat Selection · Stripe Payment</em>
+</p>
 
-Automated show reminder emails
+<p align="center">
+  <img src="screenshots/listShows.png" width="42%" />
+  <img src="screenshots/addshows.png" width="42%" />
+  <br/>
+  <em>Admin Show Management</em>
+</p>
 
-🧠 Seat Management
+<p align="center">
+  <img src="screenshots/admin.png" width="42%" />
+  <br/>
+  <em>Admin Dashboard</em>
+</p>
 
-Seats are temporarily locked when checkout begins
+---
 
-Locks automatically expire after 10 minutes if payment is incomplete
+## 📁 Project Structure
 
-Ensures concurrency safety and prevents race conditions
-
-🧰 Tech Stack
-Frontend
-
-
-
-
-
-
-Backend
-
-
-
-
-Database & APIs
-
-
-
-
-Auth, Payments & Deployment
-
-
-
-
-
-
-
-
-📸 Screenshots
-<p align="center"> <img src="screenshots/home.png" width="42%" /> <img src="screenshots/movies.png" width="42%" /> <br/> <em>Home Page · Movies Listing</em> </p> <p align="center"> <img src="screenshots/movieDetails.png" width="42%" /> <img src="screenshots/trailers.png" width="42%" /> <br/> <em>Movie Details · Trailers</em> </p> <p align="center"> <img src="screenshots/seatLayout.png" width="42%" /> <img src="screenshots/paymentpage.png" width="42%" /> <br/> <em>Seat Selection · Stripe Payment</em> </p> <p align="center"> <img src="screenshots/listShows.png" width="42%" /> <img src="screenshots/addshows.png" width="42%" /> <br/> <em>Admin Show Management</em> </p> <p align="center"> <img src="screenshots/admin.png" width="42%" /> <br/> <em>Admin Dashboard</em> </p>
-
-📁 Project Structure
-
+```text
 quickflick/
 ├── backend/
 │   ├── controllers/
@@ -115,10 +137,9 @@ quickflick/
 ├── .env.example
 └── README.md
 
+## 🏗️ Architecture Overview
 
-🏗️ Architecture Overview
-
-
+```text
 Client (React)
       │
       ▼
@@ -131,26 +152,22 @@ MongoDB Stripe API   TMDB API
  ▼
 Brevo SMTP (Emails)
 
-
 🔄 Application Flow
 
 Booking Flow
 
-User selects movie, showtime, and seats
-
-Backend locks seats temporarily
-
-Stripe checkout session is created
-
-Payment succeeds → booking confirmed
-
-Confirmation email is sent
-
-Unpaid bookings expire after 10 minutes
+1. User selects movie, showtime, and seats
+2. Backend locks seats temporarily
+3. Stripe checkout session is created
+4. Payment succeeds → booking confirmed
+5. Confirmation email is sent
+6. Unpaid bookings expire after 10 minutes
 
 ⚙️ Environment Variables
 
 Backend (backend/.env)
+
+```text
 
 MONGO_URI=your_mongodb_uri
 STRIPE_SECRET_KEY=your_stripe_secret_key
@@ -159,6 +176,8 @@ SMTP_PASS=your_brevo_smtp_key
 SENDER_EMAIL=your_verified_sender_email
 
 Frontend (frontend/.env)
+
+```text
 
 VITE_API_URL=your_backend_url
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
@@ -200,3 +219,5 @@ Built and extended by Suraj M
 📜 License
 
 This project is licensed under the MIT License.
+
+
