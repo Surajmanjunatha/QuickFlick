@@ -48,26 +48,32 @@ It enables users to browse movies, select showtimes, book seats in real time, an
 
 ---
 
-## 🧰 Tech Stack
+🧰 Tech Stack
+Frontend
 
-### Frontend
-- React
-- Vite
-- Tailwind CSS
 
-### Backend
-- Node.js
-- Express.js
 
-### Database & APIs
-- MongoDB
-- TMDB API
 
-### Auth, Payments & Deployment
-- Clerk
-- Stripe
-- Vercel
-- Render
+
+
+Backend
+
+
+
+
+Database & APIs
+
+
+
+
+Auth, Payments & Deployment
+
+
+
+
+
+
+
 
 ---
 
@@ -194,35 +200,35 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 🧩 Design Principles
 
-RESTful API design
+• RESTful API design
 
-Clear separation of concerns
+• Clear separation of concerns
 
-Secure payment workflows
+• Secure payment workflows
 
-Scalable data models
+• Scalable data models
 
-Concurrency-safe seat handling
+• Concurrency-safe seat handling
 
-Production-ready error handling
+• Production-ready error handling
 
 🔮 Future Enhancements
 
-Seat category pricing (Gold / Silver / Platinum)
+• Seat category pricing (Gold / Silver / Platinum)
 
-Coupons and offers
+• Coupons and offers
 
-QR-code based ticket validation
+• QR-code based ticket validation
 
-Progressive Web App (PWA)
+• Progressive Web App (PWA)
 
 🙌 Acknowledgements
 
-Movie data powered by TMDB API
+• Movie data powered by TMDB API
 
-Inspired by GreatStack MERN Movie Booking Series
+• Inspired by GreatStack MERN Movie Booking Series
 
-Built and extended by Suraj M
+• Built and extended by Suraj M
 
 📜 License
 
