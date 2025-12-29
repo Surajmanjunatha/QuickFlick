@@ -77,27 +77,128 @@ The platform supports both **user and admin workflows**, dynamic seat locking, a
 ## 📸 Screenshots
 <p align="center"> <img src="screenshots/home.png" width="42%" /> <img src="screenshots/movies.png" width="42%" /> <br/> <em>Home Page · Movies Listing</em> </p> <p align="center"> <img src="screenshots/movieDetails.png" width="42%" /> <img src="screenshots/trailers.png" width="42%" /> <br/> <em>Movie Details · Trailers Section</em> </p> <p align="center"> <img src="screenshots/seatLayout.png" width="42%" /> <img src="screenshots/paymentpage.png" width="42%" /> <br/> <em>Seat Selection · Stripe Payment Page</em> </p> <p align="center"> <img src="screenshots/listShows.png" width="42%" /> <img src="screenshots/addshows.png" width="42%" /> <br/> <em>Admin Show Management · Add Shows</em> </p> <p align="center"> <img src="screenshots/admin.png" width="42%" /> <br/> <em>Admin Dashboard</em> </p>
 
+📁 Project Structure
+quickflick/
+├── backend/
+│   ├── controllers/        # Business logic
+│   ├── models/             # Mongoose schemas
+│   ├── routes/             # REST API routes
+│   ├── services/           # Stripe, Email, TMDB integrations
+│   ├── middlewares/        # Auth, admin checks, error handling
+│   ├── utils/              # Seat locking & schedulers
+│   ├── config/             # DB & SMTP configuration
+│   └── server.js           # Backend entry point
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Application pages
+│   │   ├── layouts/        # User & Admin layouts
+│   │   ├── services/       # API calls
+│   │   ├── hooks/          # Custom hooks
+│   │   ├── utils/          # Helpers
+│   │   └── App.jsx
+│   └── main.jsx
+│
+├── screenshots/            # README screenshots
+├── .env.example
+└── README.md
+
+🏗️ System Architecture
+┌───────────────┐
+│   Frontend    │
+│   (React)     │
+└───────┬───────┘
+        │ HTTPS
+        ▼
+┌───────────────┐
+│    Backend    │
+│   (Express)   │
+└───────┬───────┘
+        │
+ ┌──────┼───────────────┐
+ │      │               │
+ ▼      ▼               ▼
+MongoDB Stripe API     TMDB API
+ │        │               │
+ ▼        ▼               ▼
+Bookings Payments     Movies & Shows
+ │
+ ▼
+Brevo SMTP (Emails)
+
+🔄 Application Flow
+🎟 Booking & Payment Flow
+
+User selects movie, showtime, and seats
+
+Backend temporarily locks selected seats
+
+Stripe checkout session is created
+
+User completes payment
+
+Booking is confirmed in MongoDB
+
+Confirmation email is sent
+
+If payment is not completed within 10 minutes, seats are released automatically
+
+⏱ Seat Locking Logic
+
+Seats are marked as locked during checkout
+
+Background job tracks pending bookings
+
+Locks expire after 10 minutes if unpaid
+
+Prevents race conditions and double booking
+
+🔐 Authentication Flow
+
+Authentication handled by Clerk
+
+Frontend uses Clerk session tokens
+
+Backend validates protected routes
+
+Admin routes are role-restricted
 
 ⚙️ Environment Variables
-
-Backend
-
-env
-Copy code
-MONGO_URI=your_mongodb_uri
-STRIPE_SECRET_KEY=your_stripe_secret
+Backend (backend/.env)
+MONGO_URI=your_mongodb_connection_string
+STRIPE_SECRET_KEY=your_stripe_secret_key
 SMTP_USER=apikey
-SMTP_PASS=your_smtp_key
-SENDER_EMAIL=your_verified_email
+SMTP_PASS=your_brevo_smtp_key
+SENDER_EMAIL=your_verified_sender_email
 
-Frontend
-
-env
-Copy code
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
+Frontend (frontend/.env)
+VITE_API_URL=your_backend_url
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 VITE_TMDB_API_KEY=your_tmdb_api_key
-VITE_API_URL=backend_url
+
+🧩 Design Principles
+
+RESTful API design
+
+Separation of concerns
+
+Secure payment workflows
+
+Scalable data models
+
+Production-ready error handling
+
+Concurrency-safe seat management
+
+💡 Why This Architecture?
+
+Easy to scale with offers, seat categories, and PWA support
+
+Handles real-world booking concurrency
+
+Cleanly aligns with SDE-1 system design expectations
 
 
 🔮 Future Enhancements
