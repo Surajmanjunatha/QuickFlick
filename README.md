@@ -74,38 +74,48 @@ It enables users to browse movies, select showtimes, book seats in real time, an
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/home.png" width="42%" />
-  <img src="screenshots/movies.png" width="42%" />
+  <img src="screenshots/home.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/movies.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
   <br/>
   <em>Home Page · Movies Listing</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/movieDetails.png" width="42%" />
-  <img src="screenshots/trailers.png" width="42%" />
+  <img src="screenshots/movieDetails.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/trailers.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
   <br/>
   <em>Movie Details · Trailers</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/seatLayout.png" width="42%" />
-  <img src="screenshots/paymentpage.png" width="42%" />
+  <img src="screenshots/seatLayout.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/paymentpage.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
   <br/>
   <em>Seat Selection · Stripe Payment</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/listShows.png" width="42%" />
-  <img src="screenshots/addshows.png" width="42%" />
+  <img src="screenshots/listShows.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/addshows.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
   <br/>
   <em>Admin Show Management</em>
 </p>
 
 <p align="center">
-  <img src="screenshots/admin.png" width="42%" />
+  <img src="screenshots/admin.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
   <br/>
   <em>Admin Dashboard</em>
 </p>
+
 
 ---
 
