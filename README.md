@@ -46,32 +46,30 @@ It enables users to browse movies, select showtimes, book seats in real time, an
 - Locks automatically expire after **10 minutes** if payment is incomplete
 - Ensures concurrency safety and prevents race conditions
 
-🧰 Tech Stack
-Frontend
+---
 
+## 🧰 Tech Stack
 
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0F172A?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
 
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
+### Database & APIs
+![MongoDB](https://img.shields.io/badge/MongoDB-001E2B?style=for-the-badge&logo=mongodb&logoColor=47A248)
+![TMDB](https://img.shields.io/badge/TMDB-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white)
 
+### Auth, Payments & Deployment
+![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-1A1A1A?style=for-the-badge&logo=render&logoColor=46E3B7)
 
-Backend
-
-
-
-
-Database & APIs
-
-
-
-
-Auth, Payments & Deployment
-
-
-
-
-
-
-
+---
 
 ## 📸 Screenshots
 
