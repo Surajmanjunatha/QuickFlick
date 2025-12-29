@@ -75,8 +75,6 @@ Auth, Payments & Deployment
 
 
 
----
-
 ## 📸 Screenshots
 
 <p align="center">
@@ -212,6 +210,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 • Production-ready error handling
 
+
 🔮 Future Enhancements
 
 • Seat category pricing (Gold / Silver / Platinum)
@@ -224,6 +223,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 🙌 Acknowledgements
 
+
 • Movie data powered by TMDB API
 
 • Inspired by GreatStack MERN Movie Booking Series
@@ -231,6 +231,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 • Built and extended by Suraj M
 
 📜 License
+
 
 This project is licensed under the MIT License.
 
