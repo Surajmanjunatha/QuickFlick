@@ -46,8 +46,6 @@ It enables users to browse movies, select showtimes, book seats in real time, an
 - Locks automatically expire after **10 minutes** if payment is incomplete
 - Ensures concurrency safety and prevents race conditions
 
----
-
 🧰 Tech Stack
 Frontend
 
