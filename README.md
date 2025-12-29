@@ -202,8 +202,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 ```
 
-🧩 Design Principles
-
+🧩 Design Principles  
 
 • RESTful API design
 
@@ -218,8 +217,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 • Production-ready error handling
 
 
-🔮 Future Enhancements
-
+🔮 Future Enhancements  
 
 • Seat category pricing (Gold / Silver / Platinum)
 
@@ -229,10 +227,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 • Progressive Web App (PWA)
 
-
-
-🙌 Acknowledgements
-
+🙌 Acknowledgements  
 
 • Movie data powered by TMDB API
 
@@ -240,8 +235,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 • Built and extended by Suraj M
 
-📜 License
-
+📜 License  
 
 This project is licensed under the MIT License.
 
