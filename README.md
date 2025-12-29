@@ -204,6 +204,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 🧩 Design Principles
 
+
 • RESTful API design
 
 • Clear separation of concerns
@@ -219,6 +220,7 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 
 🔮 Future Enhancements
 
+
 • Seat category pricing (Gold / Silver / Platinum)
 
 • Coupons and offers
@@ -226,6 +228,8 @@ VITE_TMDB_API_KEY=your_tmdb_api_key
 • QR-code based ticket validation
 
 • Progressive Web App (PWA)
+
+
 
 🙌 Acknowledgements
 
