@@ -137,6 +137,8 @@ quickflick/
 ├── .env.example
 └── README.md
 
+```
+
 ## 🏗️ Architecture Overview
 
 ```text
@@ -151,6 +153,8 @@ MongoDB Stripe API   TMDB API
  │
  ▼
 Brevo SMTP (Emails)
+
+```
 
 🔄 Application Flow
 
@@ -175,6 +179,8 @@ SMTP_USER=apikey
 SMTP_PASS=your_brevo_smtp_key
 SENDER_EMAIL=your_verified_sender_email
 
+```
+
 Frontend (frontend/.env)
 
 ```text
@@ -183,6 +189,8 @@ VITE_API_URL=your_backend_url
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
 VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 VITE_TMDB_API_KEY=your_tmdb_api_key
+
+```
 
 🧩 Design Principles
 
