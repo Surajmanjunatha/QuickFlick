@@ -75,26 +75,13 @@ The platform supports both **user and admin workflows**, dynamic seat locking, a
 ---
 
 ## 📸 Screenshots
+<p align="center"> <img src="screenshots/home.png" width="42%" /> <img src="screenshots/movies.png" width="42%" /> <br/> <em>Home Page · Movies Listing</em> </p> <p align="center"> <img src="screenshots/movieDetails.png" width="42%" /> <img src="screenshots/trailers.png" width="42%" /> <br/> <em>Movie Details · Trailers Section</em> </p> <p align="center"> <img src="screenshots/seatLayout.png" width="42%" /> <img src="screenshots/paymentpage.png" width="42%" /> <br/> <em>Seat Selection · Stripe Payment Page</em> </p> <p align="center"> <img src="screenshots/listShows.png" width="42%" /> <img src="screenshots/addshows.png" width="42%" /> <br/> <em>Admin Show Management · Add Shows</em> </p> <p align="center"> <img src="screenshots/admin.png" width="42%" /> <br/> <em>Admin Dashboard</em> </p>
 
-_Add screenshots here to showcase the UI and features._
 
-screenshots/
-├── home.png
-├── movie-details.png
-├── seat-selection.png
-├── payment.png
-├── booking-confirmation.png
-├── admin-dashboard.png
-
-scss
-Copy code
-
-```markdown
-![Home](screenshots/home.png)
-![Seat Selection](screenshots/seat-selection.png)
-![Payment](screenshots/payment.png)
 ⚙️ Environment Variables
+
 Backend
+
 env
 Copy code
 MONGO_URI=your_mongodb_uri
@@ -102,13 +89,17 @@ STRIPE_SECRET_KEY=your_stripe_secret
 SMTP_USER=apikey
 SMTP_PASS=your_smtp_key
 SENDER_EMAIL=your_verified_email
+
 Frontend
+
 env
 Copy code
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
 VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 VITE_TMDB_API_KEY=your_tmdb_api_key
 VITE_API_URL=backend_url
+
+
 🔮 Future Enhancements
 Seat category pricing (Gold / Silver / Platinum)
 
