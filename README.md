@@ -1,50 +1,50 @@
 # 🎬 QuickFlick — Movie Ticket Booking Platform
 
-QuickFlick is a full-stack **movie ticket booking web application** built using the **MERN stack**, featuring real-time seat booking, secure payments, authentication, and automated email notifications.  
-The platform supports both **user and admin workflows**, dynamic seat locking, and show data powered by the TMDB API.
+QuickFlick is a full-stack **movie ticket booking web application** built using the **MERN stack**.  
+It enables users to browse movies, select showtimes, book seats in real time, and complete secure payments, while providing admins with full control over movies, shows, and bookings.
 
 🔗 **Live Demo:** https://quickflick-sigma.vercel.app
 
 ---
 
-## 🚀 Key Features
+## ✨ Features
 
-### 👤 User Features
-- Browse movies and shows fetched dynamically from **TMDB API**
-- Select showtimes and choose seats in real time
-- **Dynamic seat locking** during checkout
-- Automatic **seat release after 10 minutes** if payment is not completed
+### 👤 User
+- Browse movies and shows powered by **TMDB API**
+- Real-time seat selection and booking
+- Dynamic seat locking during checkout
+- Automatic seat release after **10 minutes** if payment is not completed
 - Secure payments using **Stripe**
-- **Booking confirmation emails**
-- **Show reminder emails** before the movie time
+- Booking confirmation emails
+- Automated show reminder emails
 - View booking history
 
-### 🛠 Admin Features
+### 🛠 Admin
 - Add and manage movies and shows
 - Configure show timings and pricing
 - View bookings and analytics
-- Prevent double-booking using seat state management
+- Prevent double bookings using seat-state management
 
 ---
 
 ## 🔐 Authentication & Payments
 - **Clerk** for authentication and user management
-- **Stripe Payment Gateway** for secure transactions
-- Server-side validation for booking and payment workflows
+- **Stripe** for secure payment processing
+- Server-side validation for booking and payment flows
 
 ---
 
-## 📧 Email Automation
+## 📧 Email Notifications
+- Transactional emails via **Brevo SMTP**
 - Booking confirmation emails
 - Automated show reminder emails
-- SMTP-based transactional email system (Brevo)
 
 ---
 
-## 🧠 Seat Management Logic
-- Seats are temporarily locked when a user initiates payment
-- If payment is **not completed within 10 minutes**, seats are automatically released
-- Prevents race conditions and double booking
+## 🧠 Seat Management
+- Seats are temporarily locked when checkout begins
+- Locks automatically expire after **10 minutes** if payment is incomplete
+- Ensures concurrency safety and prevents race conditions
 
 ---
 
@@ -57,64 +57,186 @@ The platform supports both **user and admin workflows**, dynamic seat locking, a
 
 ### Backend
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
 ### Database & APIs
 ![MongoDB](https://img.shields.io/badge/MongoDB-001E2B?style=for-the-badge&logo=mongodb&logoColor=47A248)
 ![TMDB](https://img.shields.io/badge/TMDB-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white)
 
-### Authentication & Payments
+### Auth, Payments & Deployment
 ![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)
 ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
-
-### Tools & Deployment
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-1A1A1A?style=for-the-badge&logo=render&logoColor=46E3B7)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
 ## 📸 Screenshots
-<p align="center"> <img src="screenshots/home.png" width="42%" /> <img src="screenshots/movies.png" width="42%" /> <br/> <em>Home Page · Movies Listing</em> </p> <p align="center"> <img src="screenshots/movieDetails.png" width="42%" /> <img src="screenshots/trailers.png" width="42%" /> <br/> <em>Movie Details · Trailers Section</em> </p> <p align="center"> <img src="screenshots/seatLayout.png" width="42%" /> <img src="screenshots/paymentpage.png" width="42%" /> <br/> <em>Seat Selection · Stripe Payment Page</em> </p> <p align="center"> <img src="screenshots/listShows.png" width="42%" /> <img src="screenshots/addshows.png" width="42%" /> <br/> <em>Admin Show Management · Add Shows</em> </p> <p align="center"> <img src="screenshots/admin.png" width="42%" /> <br/> <em>Admin Dashboard</em> </p>
 
+<p align="center">
+  <img src="screenshots/home.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/movies.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <br/>
+  <em>Home Page · Movies Listing</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/movieDetails.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/trailers.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <br/>
+  <em>Movie Details · Trailers</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/seatLayout.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/paymentpage.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <br/>
+  <em>Seat Selection · Stripe Payment</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/listShows.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="screenshots/addshows.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <br/>
+  <em>Admin Show Management</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/admin.png" width="42%"
+       style="border:1px solid #e5e7eb; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <br/>
+  <em>Admin Dashboard</em>
+</p>
+
+
+---
+
+## 📁 Project Structure
+
+```text
+quickflick/
+├── backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── middlewares/
+│   ├── utils/
+│   ├── config/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── layouts/
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   └── utils/
+│   └── main.jsx
+│
+├── screenshots/
+├── .env.example
+└── README.md
+
+```
+
+## 🏗️ Architecture Overview
+
+```text
+Client (React)
+      │
+      ▼
+Backend (Express)
+      │
+ ┌────┼───────────────┐
+ │    │               │
+MongoDB Stripe API   TMDB API
+ │
+ ▼
+Brevo SMTP (Emails)
+
+```
+
+🔄 Application Flow
+
+Booking Flow
+
+1. User selects movie, showtime, and seats
+2. Backend locks seats temporarily
+3. Stripe checkout session is created
+4. Payment succeeds → booking confirmed
+5. Confirmation email is sent
+6. Unpaid bookings expire after 10 minutes
 
 ⚙️ Environment Variables
 
-Backend
+Backend (backend/.env)
 
-env
-Copy code
+```text
+
 MONGO_URI=your_mongodb_uri
-STRIPE_SECRET_KEY=your_stripe_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
 SMTP_USER=apikey
-SMTP_PASS=your_smtp_key
-SENDER_EMAIL=your_verified_email
+SMTP_PASS=your_brevo_smtp_key
+SENDER_EMAIL=your_verified_sender_email
 
-Frontend
+```
 
-env
-Copy code
+Frontend (frontend/.env)
+
+```text
+
+VITE_API_URL=your_backend_url
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
 VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 VITE_TMDB_API_KEY=your_tmdb_api_key
-VITE_API_URL=backend_url
+
+```
+
+🧩 Design Principles  
+
+• RESTful API design
+
+• Clear separation of concerns
+
+• Secure payment workflows
+
+• Scalable data models
+
+• Concurrency-safe seat handling
+
+• Production-ready error handling
 
 
-🔮 Future Enhancements
-Seat category pricing (Gold / Silver / Platinum)
+🔮 Future Enhancements  
 
-Coupon and offer system
+• Seat category pricing (Gold / Silver / Platinum)
 
-QR-code based ticket validation
+• Coupons and offers
 
-PWA support for mobile users
+• QR-code based ticket validation
 
-🙌 Acknowledgements
-Movie data powered by TMDB API
+• Progressive Web App (PWA)
 
-Project inspired by GreatStack MERN Movie Booking series
+🙌 Acknowledgements  
 
-Built and extended by Suraj M
+• Movie data powered by TMDB API
 
-📜 License
+• Inspired by GreatStack MERN Movie Booking Series
+
+• Built and extended by Suraj M
+
+📜 License  
+
 This project is licensed under the MIT License.
+
+
