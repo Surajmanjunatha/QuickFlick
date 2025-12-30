@@ -14,7 +14,7 @@ const MovieCard = ({ movie }) => {
     flex flex-col justify-between
     p-3 bg-gray-800 rounded-2xl
     hover:-translate-y-1 transition duration-300
-    w-64 shrink-0">
+    w-[calc(25%-2rem)]">
       <img
         onClick={() => {
           navigate(`/movies/${movie._id}`)
