@@ -14,10 +14,9 @@ const MovieCard = ({ movie }) => {
     flex flex-col justify-between
     p-3 bg-gray-800 rounded-2xl
     hover:-translate-y-1 transition duration-300
-    w-full
-    sm:w-[48%]
-    md:w-[31%]
-    lg:w-[23%]
+    basis-full
+    sm:basis-[48%]
+    md:basis-[23%]
   ">
       <img
         onClick={() => {
