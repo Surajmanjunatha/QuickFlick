@@ -22,7 +22,7 @@ const FeaturedSection = () => {
                </button>
           </div>
 
-          <div className='flex flex-wrap gap-8 mt-8'>
+          <div className='flex flex-wrap gap-8 mt-8 overflow-x-auto no-scrollbar'>
                {shows.slice(0,5).map((show) => (
                <MovieCard key={show._id} movie={show} />
                ))}
